@@ -15,6 +15,16 @@ body {
     margin-top: 20px;
 }
 
+/* Mobile Responsive Styles for Ratings Container */
+@media screen and (max-width: 768px) {
+    .ratings-container {
+        align-items: center;
+        width: 100%;
+        margin-top: 0;
+        gap: 15px;
+    }
+}
+
 .rating-card {
     background: hsl(300, 24%, 96%);
     border-radius: 10px;
@@ -35,6 +45,23 @@ body {
 }
 .rating-card:nth-child(3) {
     transform: translateX(60px);
+}
+
+/* Mobile Responsive Styles for Rating Cards */
+@media screen and (max-width: 768px) {
+    .rating-card {
+        width: calc(100% - 40px);
+        max-width: 350px;
+        margin: 0 auto;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .rating-card:nth-child(2),
+    .rating-card:nth-child(3) {
+        transform: none;
+    }
 }
 .rating-card:hover {
     box-shadow: 0 4px 16px rgba(0,0,0,0.16);
@@ -77,6 +104,59 @@ body {
     margin: 0;
     text-align: left;
 }
+
+/* Mobile Responsive Styles for Rating Details */
+@media screen and (max-width: 768px) {
+    .rating-details {
+        flex-direction: column;
+        gap: 8px;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .rating-details .stars {
+        text-align: center;
+        font-size: 1.2em;
+    }
+    
+    .rating-details p {
+        text-align: center;
+        font-size: 0.9em;
+    }
+}
+
+/* Additional Mobile Styles for Small Screens */
+@media screen and (max-width: 480px) {
+    .main-content {
+        margin: 15px;
+        margin-left: 15px;
+        margin-top: 30px;
+        gap: 25px;
+    }
+    
+    .header-title {
+        font-size: 1.6em;
+    }
+    
+    .header-paragraph {
+        font-size: 0.95em;
+        padding: 0 5px;
+    }
+    
+    .rating-card {
+        width: calc(100% - 30px);
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .rating-details .stars {
+        font-size: 1.1em;
+    }
+    
+    .rating-details p {
+        font-size: 0.85em;
+    }
+}
 /* ...existing code... */   
 
 .main-content {
@@ -90,11 +170,35 @@ body {
     margin-top: 100px;
 }
 
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        gap: 30px;
+        margin: 20px;
+        margin-left: 20px;
+        margin-top: 40px;
+        align-items: center;
+        text-align: center;
+    }
+}
+
 .header-container {
     min-width: 320px; /* Optional: set a min width for the header */
     max-width: 600px;
     text-align: left;
     margin-bottom: 20px;
+}
+
+/* Mobile Responsive Styles for Header */
+@media screen and (max-width: 768px) {
+    .header-container {
+        min-width: auto;
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
 }
 .header-title {
     font-size: 2.2em;
@@ -111,5 +215,19 @@ body {
     margin: 0;
     max-width: 600px;
     line-height: 1.6;
+}
+
+/* Mobile Responsive Styles for Header Text */
+@media screen and (max-width: 768px) {
+    .header-title {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+    
+    .header-paragraph {
+        font-size: 1em;
+        max-width: 100%;
+        padding: 0 10px;
+    }
 }
 
