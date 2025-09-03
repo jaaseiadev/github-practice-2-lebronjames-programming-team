@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+body {
+    background: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.ratings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.rating-card {
+    background: hsl(300, 24%, 96%);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding-bottom: 20px;
+    padding-top: 5px;
+    width: 400px;
+    height: 20px;
+    text-align:left;
+    transition: box-shadow 0.2s;
+    padding-left: 24px; 
+    font-family: 'League Spartan', Arial, sans-serif;
+    font-weight: 700;
+    
+}
+.rating-card:nth-child(2) {
+    transform: translateX(30px);    
+}
+.rating-card:nth-child(3) {
+    transform: translateX(60px);
+}
+.rating-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.16);
+}
+
+.rating-card h2 {
+    margin-top: 0;
+    font-size: 1.3em;
+    color: #333;
+}
+
+.stars {
+    font-size: 1.5em;
+    color: #db9900;
+    margin: 12px 0;
+}
+
+.rating-card p {
+    color: hsl(300, 43%, 22%);
+    font-size: 1em;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+/* ...existing code... */
+.rating-details {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.rating-details .stars {
+    margin: 0;
+    text-align: left;
+}
+
+.rating-details p {
+    margin: 0;
+    text-align: left;
+}
+/* ...existing code... */   
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 60px; /* Adjust space between header and ratings */
+    margin: 40px 40px 40px 40px; /* Optional: add margin from top/left */
+    margin-left: 150px;
+    margin-top: 100px;
+}
+
+.header-container {
+    min-width: 320px; /* Optional: set a min width for the header */
+    max-width: 600px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.header-title {
+    font-size: 2.2em;
+    color: hsl(300, 43%, 22%);
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.header-paragraph {
+    font-size: 1.1em;
+    color: hsl(303, 10%, 53%);
+    margin: 0;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
