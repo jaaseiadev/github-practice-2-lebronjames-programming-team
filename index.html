@@ -11,25 +11,37 @@
   </head>
   <body>
     <div class="container">
-    <h1>10,000+ of our users love our products.</h1>
-
-    <p>We only provide great products combined with excellent customer service.
-    See what our satisfied customers are saying about our services.</p>
-    
-    <div id="ratings-placeholder"> </div>
-    <script>
-      fetch('ratings.html')
-        .then(response => response.text())
-        .then(html => {
-          // Extract only the ratings cards from the loaded HTML
-          const temp = document.createElement('div');
-          temp.innerHTML = html;
-          const ratings = temp.querySelector('.ratings-container');
-          if (ratings) {
-            document.getElementById('ratings-placeholder').appendChild(ratings);
-          }
-        });
-    </script>
+      <div class="top-container">
+        <span>
+          <div class="header-container">
+              <h1 class="header-title">
+                  10,000+ of our<br>
+                  users love our<br>
+                  products.
+              </h1>
+              <p class="header-paragraph">
+                  We only provide great products combined with <span class="highlight">excellent</span><br>
+                  customer service.
+                  See what our satisfied customers are<br>
+                  saying about our <span class="highlight">services</span>.
+              </p>
+          </div>
+        </span>
+          <span id="ratings-placeholder"> </span>
+          <script>
+            fetch('ratings.html')
+              .then(response => response.text())
+              .then(html => {
+                // Extract only the ratings cards from the loaded HTML
+                const temp = document.createElement('div');
+                temp.innerHTML = html;
+                const ratings = temp.querySelector('.ratings-container');
+                if (ratings) {
+                  document.getElementById('ratings-placeholder').appendChild(ratings);
+                }
+              });
+          </script>
+      </div>
     <div class="cards">
     Colton Smith 
     Verified Buyer
