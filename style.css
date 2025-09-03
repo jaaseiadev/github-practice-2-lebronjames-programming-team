@@ -5,6 +5,19 @@
     border-radius: 12px;
     font-family: 'League Spartan', Arial, sans-serif;
 }
+
+/* Mobile Responsive Styles for Body */
+@media screen and (max-width: 768px) {
+    .body {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .body {
+        padding: 10px;
+    }
+}
 .container {
     max-width: 1000px;
     margin: 100px auto;
@@ -15,9 +28,37 @@
     backdrop-filter: blur(2px);
     min-height: 600px;
 }
+
+/* Mobile Responsive Styles for Container */
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 40px 20px;
+        max-width: 95%;
+        min-height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        margin: 10px auto;
+        padding: 30px 15px;
+        max-width: 98%;
+    }
+}
 .top-container {
     display: flex;
     align-items: left;
+}
+
+/* Mobile Responsive Styles for Top Container */
+@media screen and (max-width: 768px) {
+    .top-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
 }
 
 .header-container {
@@ -31,10 +72,39 @@
     font-size: 15px;
 }
 
+/* Mobile Responsive Styles for Header */
+@media screen and (max-width: 768px) {
+    .header-container {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    
+    .header-paragraph {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-paragraph {
+        font-size: 13px;
+        padding: 0 5px;
+    }
+}
+
 .rating-placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Mobile Responsive Styles for Rating Placeholder */
+@media screen and (max-width: 768px) {
+    .rating-placeholder {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 .review-cards {
@@ -43,6 +113,23 @@
     justify-content: center;
     margin-bottom: 2rem;
     margin-top: 2rem;
+}
+
+/* Mobile Responsive Styles for Review Cards */
+@media screen and (max-width: 768px) {
+    .review-cards {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 2rem;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .review-cards {
+        gap: 0.8rem;
+        margin-top: 1.5rem;
+    }
 }
 
 .review-card {
@@ -55,6 +142,24 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+/* Mobile Responsive Styles for Individual Review Card */
+@media screen and (max-width: 768px) {
+    .review-card {
+        width: 100%;
+        max-width: 400px;
+        min-height: auto;
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .review-card {
+        max-width: 100%;
+        padding: 1.2rem;
+        margin: 0 10px;
+    }
 }
 
 .review-header {
@@ -89,4 +194,77 @@
     color: white;
     margin-top: 1rem;
     text-align: left;
+}
+
+/* Mobile Responsive Styles for Review Content */
+@media screen and (max-width: 768px) {
+    .profile-pic {
+        width: 45px;
+        height: 45px;
+        margin-right: 0.8rem;
+    }
+    
+    .reviewer-name {
+        font-size: 0.95em;
+    }
+    
+    .verified-buyer {
+        font-size: 0.85em;
+    }
+    
+    .review-text {
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-pic {
+        width: 40px;
+        height: 40px;
+        margin-right: 0.7rem;
+    }
+    
+    .reviewer-name {
+        font-size: 0.9em;
+    }
+    
+    .verified-buyer {
+        font-size: 0.8em;
+    }
+    
+    .review-text {
+        font-size: 0.85em;
+        line-height: 1.4;
+        margin-top: 0.8rem;
+    }
+}
+
+/* Attribution Styles */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 2rem;
+    color: hsl(228, 45%, 44%);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Mobile Responsive Styles for Attribution */
+@media screen and (max-width: 768px) {
+    .attribution {
+        font-size: 10px;
+        margin-top: 1.5rem;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .attribution {
+        font-size: 9px;
+        margin-top: 1rem;
+        line-height: 1.4;
+    }
 }
