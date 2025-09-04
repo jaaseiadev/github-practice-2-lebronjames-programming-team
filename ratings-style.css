@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+body {
+    background: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.ratings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: right;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+/* Mobile Responsive Styles for Ratings Container */
+@media screen and (max-width: 768px) {
+    .ratings-container {
+        align-items: center;
+        width: 100%;
+        margin-top: 0;
+        gap: 15px;
+    }
+}
+
+.rating-card {
+    background: hsl(300, 24%, 96%);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding-bottom: 20px;
+    padding-top: 5px;
+    width: 400px;
+    height: 20px;
+    text-align:left;
+    transition: box-shadow 0.2s;
+    padding-left: 24px; 
+    font-family: 'League Spartan', Arial, sans-serif;
+    font-weight: 700;
+    
+}
+.rating-card:nth-child(2) {
+    transform: translateX(30px);    
+}
+.rating-card:nth-child(3) {
+    transform: translateX(60px);
+}
+
+/* Mobile Responsive Styles for Rating Cards */
+@media screen and (max-width: 768px) {
+    .rating-card {
+        width: calc(100% - 40px);
+        max-width: 350px;
+        margin: 0 auto;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .rating-card:nth-child(2),
+    .rating-card:nth-child(3) {
+        transform: none;
+    }
+}
+.rating-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.16);
+}
+
+.rating-card h2 {
+    margin-top: 0;
+    font-size: 1.3em;
+    color: #333;
+}
+
+.stars {
+    font-size: 1.5em;
+    color: #db9900;
+    margin: 12px 0;
+}
+
+.rating-card p {
+    color: hsl(300, 43%, 22%);
+    font-size: 1em;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+/* ...existing code... */
+.rating-details {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.rating-details .stars {
+    margin: 0;
+    text-align: left;
+}
+
+.rating-details p {
+    margin: 0;
+    text-align: left;
+}
+
+/* Mobile Responsive Styles for Rating Details */
+@media screen and (max-width: 768px) {
+    .rating-details {
+        flex-direction: column;
+        gap: 8px;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .rating-details .stars {
+        text-align: center;
+        font-size: 1.2em;
+    }
+    
+    .rating-details p {
+        text-align: center;
+        font-size: 0.9em;
+    }
+}
+
+/* Additional Mobile Styles for Small Screens */
+@media screen and (max-width: 480px) {
+    .main-content {
+        margin: 15px;
+        margin-left: 15px;
+        margin-top: 30px;
+        gap: 25px;
+    }
+    
+    .header-title {
+        font-size: 1.6em;
+    }
+    
+    .header-paragraph {
+        font-size: 0.95em;
+        padding: 0 5px;
+    }
+    
+    .rating-card {
+        width: calc(100% - 30px);
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .rating-details .stars {
+        font-size: 1.1em;
+    }
+    
+    .rating-details p {
+        font-size: 0.85em;
+    }
+}
+/* ...existing code... */   
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 60px; /* Adjust space between header and ratings */
+    margin: 40px 40px 40px 40px; /* Optional: add margin from top/left */
+    margin-left: 150px;
+    margin-top: 100px;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        gap: 30px;
+        margin: 20px;
+        margin-left: 20px;
+        margin-top: 40px;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.header-container {
+    min-width: 320px; /* Optional: set a min width for the header */
+    max-width: 600px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Mobile Responsive Styles for Header */
+@media screen and (max-width: 768px) {
+    .header-container {
+        min-width: auto;
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+}
+.header-title {
+    font-size: 2.2em;
+    color: hsl(300, 43%, 22%);
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.header-paragraph {
+    font-size: 1.1em;
+    color: hsl(303, 10%, 53%);
+    margin: 0;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* Mobile Responsive Styles for Header Text */
+@media screen and (max-width: 768px) {
+    .header-title {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+    
+    .header-paragraph {
+        font-size: 1em;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
+

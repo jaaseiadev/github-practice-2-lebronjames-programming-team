@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="ratings-style.css" />
+
+    <title>Frontend Mentor | Social proof section</title>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-container">
+        <span>
+          <div class="header-container">
+              <h1 class="header-title">
+                  10,000+ of our<br>
+                  users love our<br>
+                  products.
+              </h1>
+              <p class="header-paragraph">
+                  We only provide great products combined with <span class="highlight">excellent</span><br>
+                  customer service.
+                  See what our satisfied customers are<br>
+                  saying about our <span class="highlight">services</span>.
+              </p>
+          </div>
+        </span>
+          <span id="ratings-placeholder"> </span>
+          <script>
+            fetch('ratings.html')
+              .then(response => response.text())
+              .then(html => {
+                const temp = document.createElement('div');
+                temp.innerHTML = html;
+                const ratings = temp.querySelector('.ratings-container');
+                if (ratings) {
+                  document.getElementById('ratings-placeholder').appendChild(ratings);
+                }
+              });
+          </script>
+      </div>
+
+      <div class="review-cards">
+        <div class="review-card">
+          <div class="review-header">
+            <img src="images/image-colton.jpg" alt="Colton's profile" class="profile-pic">
+            <div class="reviewer-info">
+              <span class="reviewer-name">Colton Smith</span>
+              <span class="verified-buyer">Verified Buyer</span>
+            </div>
+          </div>
+          <p class="review-text">"We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also received it in time. Excellent!"</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <img src="images/image-irene.jpg" alt="Irene's profile" class="profile-pic">
+            <div class="reviewer-info">
+              <span class="reviewer-name">Irene Roberts</span>
+              <span class="verified-buyer">Verified Buyer</span>
+            </div>
+          </div>
+          <p class="review-text">"Customer service is always excellent and very quick turn around. Completely delighted with the simplicity of the purchase and the speed of delivery."</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <img src="images/image-anne.jpg" alt="Anne's profile" class="profile-pic">
+            <div class="reviewer-info">
+              <span class="reviewer-name">Anne Wallace</span>
+              <span class="verified-buyer">Verified Buyer</span>
+            </div>
+          </div>
+          <p class="review-text">"Put an order with this company and can only praise them for the very high standard. Will definitely use them again and recommend them to everyone!"</p>
+        </div>
+      </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Lebron James Programming Team</a>.
+    </div>
+  </div>
+  </body>
+</html>
